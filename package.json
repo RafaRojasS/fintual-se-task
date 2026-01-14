@@ -2,11 +2,11 @@
   "name": "fintual-se-task",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/portfolio.js",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/index.js",
-    "dev": "ts-node src/index.ts"
+    "start": "tsc && node dist/portfolio.js",
+    "dev": "ts-node src/portfolio.ts"
   },
   "keywords": [],
   "author": "",
