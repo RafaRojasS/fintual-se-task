@@ -51,8 +51,9 @@ class UserPortfolio implements Portfolio {
      */
     private getStockAction(quantityDifferenceFromTarget: number): stockActions {
         let action: stockActions = 'maintain';
-        if(quantityDifferenceFromTarget > 0) action = 'buy';
-        else if(quantityDifferenceFromTarget < 0) action = 'sell';
+        const roundedQuantity = Math.round(quantityDifferenceFromTarget);
+        if(roundedQuantity > 0) action = 'buy';
+        else if(roundedQuantity < 0) action = 'sell';
 
         return action;
     }
